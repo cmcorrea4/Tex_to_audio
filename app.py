@@ -18,7 +18,7 @@ text = st.text_input("Escriba el texto")
 
 def text_to_speech("es", "es", text, tld):
     #translation = translator.translate(text, src=input_language, dest=output_language)
-    #trans_text = translation.text
+    trans_text = text
     tts = gTTS(trans_text, lang=output_language, tld=tld, slow=False)
     try:
         my_file_name = text[0:20]
