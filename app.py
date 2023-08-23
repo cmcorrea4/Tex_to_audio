@@ -16,7 +16,7 @@ st.title("Text to speech")
 
 text = st.text_input("Escriba el texto")
 
-def text_to_speech('es', 'es', text, tld):
+def text_to_speech("es", "es", text, tld):
     translation = translator.translate(text, src=input_language, dest=output_language)
     trans_text = translation.text
     tts = gTTS(trans_text, lang=output_language, tld=tld, slow=False)
