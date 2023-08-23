@@ -16,10 +16,10 @@ output_language="es"
 
 text = st.text_input("Escriba el texto")
 
-def text_to_speech(input_language, output_language, text, tld):
+def text_to_speech(text, tld):
     #translation = translator.translate(text, src=input_language, dest=output_language)
-    trans_text = text
-    tts = gTTS(trans_text, lang=output_language, tld=tld, slow=False)
+    
+    tts = gTTS(text, "es", tld=tld, slow=False)
     try:
         my_file_name = text[0:20]
     except:
